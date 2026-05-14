@@ -1,0 +1,155 @@
+%-------------------------
+% Resume in Latex
+% Tailored for: Applied AI Engineer @ Serval
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[margin=0.35in]{geometry}
+\usepackage[default]{sourcesanspro}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeHeading}[4]{
+  \item
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} \emph{#2}  \\
+    \textbf{{\small #3}} & {\small #4} \\
+  \end{tabular*}
+  \vspace{-10pt}
+}
+\newcommand{\resumeProjectHeading}[3]{
+  \item
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & {\small #3} \\
+    \vspace{-24pt}
+  \end{tabular*}
+  \vspace{-10pt}
+}
+\newcommand{\resumeEducationHeading}[3]{
+  \item
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} $|$ \emph{#2} & {\small #3} \\
+  \end{tabular*}
+  \vspace{-14pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in, labelsep=4pt, itemsep=0pt, label=\tiny$\bullet$]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\huge Suraj Bijjala} \\ \vspace{2pt}
+    \small
+    +1 (240) 991-2736 $|$
+    \href{mailto:suraj.bijjala.2@gmail.com}{{suraj.bijjala.2@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/surajbijjala}{{linkedin.com/in/surajbijjala}} $|$
+    \href{https://www.datascienceportfol.io/surajbijjala}{Portfolio} $|$
+    \href{https://github.com/surajbijjala1}{{github.com/surajbijjala1}}
+\end{center}
+
+\vspace{-18pt}
+
+%-----------PROFESSIONAL SUMMARY-----------
+\section{Professional Summary}
+\small{
+\textbf{Applied AI Engineer} with 2+ years of experience building production-grade \textbf{AI agents}, \textbf{RAG architectures}, and intelligent automation pipelines. Specializes in designing agentic systems where \textbf{LLMs reason, act, and automate} complex enterprise workflows -- from multi-agent ETL pipelines to Voice AI agents powered by vector search and \textbf{tool calling}. Combines enterprise data engineering depth with modern AI-native development to ship reliable, scalable AI systems from prototype to production.
+}
+\vspace{-8pt}
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+\small{
+\linespread{1.15}\selectfont
+\textbf{AI \& Agents}{: LLMs (OpenAI, Claude, Gemini), Agentic AI, RAG Architecture, Multi-Agent Systems, Tool Calling, LangChain, Prompt Engineering, LLM Fine-Tuning, LLM Evaluation Pipelines, FAISS, Chroma, Pinecone, AI Guardrails, NLP} \\
+\textbf{Languages \& Frameworks}{: Python (FastAPI, Pandas, PyTorch), TypeScript, JavaScript, Node.js, React, Angular, NestJS, SQL, REST API} \\
+\textbf{Data \& Cloud}{: PostgreSQL, Snowflake, MongoDB, dbt Cloud, Apache Airflow, AWS (S3, Lambda, RDS), Azure, ETL/ELT} \\
+\textbf{DevOps \& Architecture}{: Docker, Kubernetes, CI/CD, Git, GitHub Actions, Nx Monorepo, System Design, JWT, RBAC, Prefect}
+}
+\vspace{-8pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+    {My Inner Archive -- AI-Powered RAG Journal}{}{Apr 2026}\vspace{-3pt}
+    \resumeItemListStart
+      \resumeItem{Architected a full-stack \textbf{agentic RAG} platform that reasons over a user's private journal history to synthesize personalized reflections, acting as a localized AI companion with persistent memory.}
+      \resumeItem{Engineered a resilient inference backend with \textbf{intelligent fallback routing} -- integrating the \textbf{Gemini API} for cloud generation while supporting fully private local model execution via \textbf{Ollama}.}
+      \resumeItem{Built complex frontend data visualizations using raw SVGs and React state, mapping emotional patterns stored securely in \textbf{Supabase (PostgreSQL)} with JWT authentication.}
+      \resumeItem{\textbf{Tech Stack:} React.js, Node.js, Express.js, Supabase (PostgreSQL), Gemini API, Ollama, RAG, LangChain, JWT}
+    \resumeItemListEnd
+\vspace{-14pt}
+
+\resumeProjectHeading
+    {AI Platform -- Conversational RAG Engine}{}{Sep 2025}
+    \resumeItemListStart
+      \resumeItem{Architected a production \textbf{RAG pipeline} using Python and \textbf{LangChain}, enabling an AI agent to reason over and synthesize answers from 10,000+ unstructured technical documents.}
+      \resumeItem{Optimized vector indexing with \textbf{FAISS}, achieving sub-second retrieval latency and building \textbf{LLM evaluation loops} to continuously validate response quality and accuracy.}
+      \resumeItem{Designed modular \textbf{orchestration pipelines} that reduced document ingestion time by 40\%, integrating strict \textbf{AI guardrails} to ensure safe, reliable production responses.}
+      \resumeItem{\textbf{Tech Stack:} Python, LangChain, RAG, FAISS, LLM Evaluation, Orchestration Frameworks, AI Guardrails}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-16pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeHeading{Onki AI}{}{ -- Applied AI Engineer}{Sep 2025 -- Present}
+  \resumeItemListStart
+    \resumeItem{Designed and deployed a \textbf{multi-step agentic pipeline} using \textbf{Azure OpenAI} that autonomously reasons over raw HTML, extracts structured data, and automates enrichment workflows for 3,500+ retail products.}
+    \resumeItem{Built a production \textbf{Voice AI agent} powered by \textbf{RAG} and \textbf{tool calling} -- the agent retrieves context from vector-indexed internal data, reasons over it, and responds in real time with a reliable source of truth.}
+    \resumeItem{Architected secure \textbf{PostgreSQL} infrastructure on Azure via Docker with strict \textbf{RBAC} for multi-tenant isolation, and automated \textbf{data quality} enforcement via Prefect orchestration workflows.}
+    \resumeItem{\textbf{Tech Stack:} Python, Azure OpenAI, LangChain, PostgreSQL, Docker, Prefect, RAG, Agentic ETL, Tool Calling}
+  \resumeItemListEnd
+\vspace{-4pt}
+
+  \resumeHeading{LTIMindtree (Client: Colgate-Palmolive)}{}{ -- Data Engineer}{Jul 2021 -- Dec 2023}
+  \resumeItemListStart
+    \resumeItem{Architected a scalable \textbf{3-layer data backend} (Stage, Curated, Consumption) in \textbf{Snowflake}, securely migrating 10TB of enterprise records from legacy SAP S4/ECC via \textbf{HVR replication}.}
+    \resumeItem{Engineered automated \textbf{ELT transformation pipelines} using \textbf{dbt Cloud} and \textbf{Apache Airflow}, orchestrating complex multi-granular workflows to maintain 98\% data accuracy across global operations.}
+    \resumeItem{Developed real-time analytics dashboards in \textbf{Sigma Computing} and \textbf{Tableau}, automating cross-timezone data refreshes to deliver operational visibility to executive stakeholders.}
+    \resumeItem{\textbf{Tech Stack:} Snowflake, dbt Cloud, Apache Airflow, Python, SQL, SAP S4/ECC, Sigma Computing}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-16pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeEducationHeading
+    {University of Maryland, College Park}{M.Eng. in Software Engineering $|$ GPA: 3.8}{Jan 2024 -- Dec 2025}
+  \resumeEducationHeading
+    {VNR Vignana Jyothi Institute of Engineering}{B.Tech. in Computer Science $|$ GPA: 3.5}{Aug 2017 -- Jul 2021}
+\resumeSubHeadingListEnd
+
+\end{document}

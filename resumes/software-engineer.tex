@@ -1,0 +1,184 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Modified for Premium Two-Page Layout by ChatGPT (2025)
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+% Use Geometry for better margin control
+\usepackage[margin=0.35in]{geometry}
+\usepackage[default]{sourcesanspro}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeHeading}[4]{
+  \item
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} \emph{#2}  \\
+    \textbf{{\small #3}} & {\small #4} \\
+  \end{tabular*}
+  \vspace{-10pt} % Tighter spacing after the single line
+}
+% (Ignores argument #2 "Context" entirely to save space)
+\newcommand{\resumeProjectHeading}[3]{
+  \item
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & {\small #3} \\
+    \vspace{-24pt}
+  \end{tabular*}
+  \vspace{-10pt}
+}
+% Layout: University | Degree (Left) --- Date (Right)
+\newcommand{\resumeEducationHeading}[3]{
+  \item
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} $|$ \emph{#2} & {\small #3} \\
+  \end{tabular*}
+  \vspace{-14pt}
+}
+
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+% "label=\tiny$\bullet$" forces a small, sharp dot instead of a dash
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in, labelsep=4pt, itemsep=0pt, label=\tiny$\bullet$]}
+% Increased itemsep slightly for breathing room
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+% ... resume starts here ...
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{ \huge Suraj Bijjala} \\ \vspace{2pt}
+    \small
+    +1 (240) 991-2736 $|$
+    \href{mailto:suraj.bijjala.2@gmail.com}{{suraj.bijjala.2@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/surajbijjala}{{linkedin.com/in/surajbijjala}} $|$
+    \href{https://www.datascienceportfol.io/surajbijjala}{Portfolio} $|$ \href{https://github.com/surajbijjala1}{{github.com/surajbijjala1}}
+\end{center}
+
+\vspace{-16pt}
+
+%-----------PROFESSIONAL SUMMARY-----------
+\section{Professional Summary}
+\small{
+ \textbf{Software \& AI Engineer} with over 2 years of experience in backend development, scalable data pipelines, and system architecture. Proficient in \textbf{Python}, \textbf{Node.js}, and \textbf{SQL}, with a proven track record of migrating enterprise data and building robust APIs. Highly interested in applying artificial intelligence, leveraging \textbf{Large Language Models (LLMs)}, and building \textbf{RAG architectures} to bridge the gap between traditional software engineering and modern AI-driven solutions.
+}
+\vspace{-8pt}
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+\small{
+\linespread{1.15}\selectfont
+ \textbf{Languages \& Frameworks}{: Python (FastAPI, Pandas), Node.js, TypeScript, SQL, Angular, NestJS, React, Flask} \\
+ \textbf{Cloud \& Architecture}{: AWS (S3, Lambda, RDS), Azure, Docker, CI/CD, Nx Monorepo, System Design, JWT, RBAC} \\
+ \textbf{AI \& Machine Learning}{: LLMs (OpenAI, Claude), RAG Architecture, Vector Databases (FAISS, ChromaDB), Model Fine-Tuning, Multi-Agent Systems, AI Guardrails} \\
+ \textbf{Databases \& Data Engineering}{: PostgreSQL, Snowflake, dbt Cloud, Apache Airflow, ETL/ELT, SAP S4/ECC}
+}
+\vspace{-8pt}
+
+%-----------PROJECTS-----------
+% PROJECT SELECTION RULE (Software Engineer roles):
+% Pick 2 of the 3 fullstack projects based on best tech stack match for the JD:
+%   - My Inner Archive (React, Node, Supabase/PostgreSQL, RAG, Gemini, Ollama, JWT)
+%   - AI-Assisted Enterprise Task Management (NestJS, Angular, TypeScript, Nx, RBAC, JWT)
+%   - GREBoost (add content when available)
+% Default (no clear signal): use My Inner Archive + Task Management (shown below)
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+    {My Inner Archive - AI-Powered RAG Journal}{}{Apr 2026}\vspace{-3pt}
+    \resumeItemListStart
+      \resumeItem{Architected a secure, full-stack \textbf{Retrieval-Augmented Generation (RAG)} platform that acts as a localized AI companion, exclusively utilizing a user's historical journal entries to synthesize personalized reflections and insights.}
+      \resumeItem{Engineered a resilient inference backend with smart fallback routing, seamlessly integrating the \textbf{Gemini API} for cloud-based generation while supporting fully private, local model execution via \textbf{Ollama}.}
+      \resumeItem{Developed complex frontend data visualizations from scratch utilizing raw SVGs and React state, mapping emotional patterns and user context stored securely in \textbf{Supabase (PostgreSQL)} with JWT authentication.}
+      \resumeItem{\textbf{Tech Stack:} React.js, Node.js, Express.js, Supabase (PostgreSQL), Gemini API, Ollama, RAG, JWT, Claude Code}
+    \resumeItemListEnd
+\vspace{-12pt}
+
+  \resumeProjectHeading
+    {AI-Assisted Enterprise Task Management System}{}{Feb 2026}
+    \resumeItemListStart
+      \resumeItem{Accelerated full-stack development by leveraging \textbf{AI Copilots} (Claude, Gemini) to architect a scalable \textbf{Nx monorepo} and deploy production-ready features rapidly.}
+      \resumeItem{Engineered a \textbf{NestJS} API and Angular frontend with a custom \textbf{Role-Based Access Control} engine, hardening backend security via non-mocked \textbf{JWT authentication} across all endpoints.}
+      \resumeItem{Developed a responsive Kanban dashboard using \textbf{TailwindCSS} and \textbf{RxJS} for dynamic client-side filtering, establishing a single source of truth for DTOs to eliminate code drift.}
+      \resumeItem{\textbf{Tech Stack:} NestJS, Angular, TypeScript, Nx Monorepo, TailwindCSS, RxJS, JWT, AI Copilots.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-16pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeHeading{Onki AI}{}{ -- AI Software Engineer}{Sep 2025 -- Present}
+  \resumeItemListStart
+    \resumeItem{Engineered the core backend by integrating an automated ETL pipeline with \textbf{Azure OpenAI}, parsing unstructured HTML into validated JSON schemas to drive data for 3,500+ products.}
+    \resumeItem{Developed an end-to-end AI solution by connecting backend \textbf{RAG systems} to a frontend conversational \textbf{Voice AI agent}, utilizing vector embeddings and \textbf{tool calling} for real-time interactions.}
+    \resumeItem{Architected scalable backend infrastructure via Docker and \textbf{PostgreSQL} on Azure, enforcing strict \textbf{RBAC} for multi-tenant isolation and automating modular workflows via \textbf{Prefect}.}
+    \resumeItem{\textbf{Tech Stack:} Python, Azure OpenAI, PostgreSQL, Docker, Prefect, RAG, Backend Architecture.}
+  \resumeItemListEnd
+\vspace{-4pt}
+
+  \resumeHeading{LTIMindtree (Client: Colgate-Palmolive)}{}{ -- Data Engineer}{Jul 2021 -- Dec 2023}
+  \resumeItemListStart
+    \resumeItem{Architected a scalable \textbf{3-layer data backend} (Stage, Curated, Consumption) in \textbf{Snowflake}, securely migrating 10TB of enterprise records from legacy \textbf{SAP S4/ECC} via HVR replication.}
+    \resumeItem{Engineered robust backend data transformation pipelines using \textbf{dbt Cloud} and \textbf{Apache Airflow}, optimizing complex SQL aggregations to support high-performance analytical models.}
+    \resumeItem{Designed automated reporting systems and global dashboards in \textbf{Sigma Computing}, translating complex backend analytics into actionable operational visibility for executive stakeholders.}
+    \resumeItem{\textbf{Tech Stack:} Snowflake, dbt Cloud, Apache Airflow, Python, SQL, SAP S4/ECC, Sigma Computing.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-16pt}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeEducationHeading
+    {University of Maryland, College Park}{M.Eng. in Software Engineering $|$ GPA: 3.8}{Jan 2024 -- Dec 2025}
+  \resumeEducationHeading
+    {VNR Vignana Jyothi Institute of Engineering}{B.Tech. in Computer Science $|$ GPA: 3.5}{Aug 2017 -- Jul 2021}
+\resumeSubHeadingListEnd
+\vspace{-12pt}
+
+% %-----------CERTIFICATIONS-----------
+% \section{Certifications}
+% \resumeSubHeadingListStart
+%   \resumeItem{\textbf{Machine Learning} -- Stanford University }
+%   \vspace{-4pt}
+%   \resumeItem{\textbf{Python for Data Science and AI} -- IBM }
+% \resumeSubHeadingListEnd
+
+\end{document}

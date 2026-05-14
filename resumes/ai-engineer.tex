@@ -1,0 +1,178 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Modified for Premium Two-Page Layout by ChatGPT (2025)
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+% Use Geometry for better margin control
+\usepackage[margin=0.35in]{geometry}
+\usepackage[default]{sourcesanspro}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeHeading}[4]{
+  \item
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} \emph{#2}  \\
+    \textbf{{\small #3}} & {\small #4} \\
+  \end{tabular*}
+  \vspace{-10pt} % Tighter spacing after the single line
+}
+% (Ignores argument #2 "Context" entirely to save space)
+\newcommand{\resumeProjectHeading}[3]{
+  \item
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & {\small #3} \\
+    \vspace{-24pt}
+  \end{tabular*}
+  \vspace{-10pt}
+}
+% Layout: University | Degree (Left) --- Date (Right)
+\newcommand{\resumeEducationHeading}[3]{
+  \item
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} $|$ \emph{#2} & {\small #3} \\
+  \end{tabular*}
+  \vspace{-14pt}
+}
+
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+% "label=\tiny$\bullet$" forces a small, sharp dot instead of a dash
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in, labelsep=4pt, itemsep=0pt, label=\tiny$\bullet$]}
+% Increased itemsep slightly for breathing room
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+% ... resume starts here ...
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{ \huge Suraj Bijjala} \\ \vspace{2pt}
+    \small
+    +1 (240) 991-2736 $|$
+    \href{mailto:suraj.bijjala.2@gmail.com}{{suraj.bijjala.2@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/surajbijjala}{{linkedin.com/in/surajbijjala}} $|$
+    \href{https://www.datascienceportfol.io/surajbijjala}{Portfolio} $|$ \href{https://github.com/surajbijjala1}{{github.com/surajbijjala1}}
+\end{center}
+
+\vspace{-18pt}
+
+%-----------PROFESSIONAL SUMMARY-----------
+\section{Professional Summary}
+\small{
+ \textbf{AI Engineer} with over 2 year of experience designing and deploying end-to-end artificial intelligence solutions, \textbf{RAG architectures}, and scalable data pipelines. Specialized in leveraging \textbf{Large Language Models (LLMs)}, Python, and vector databases to build autonomous agents and generative AI applications. Combines a strong foundation in enterprise \textbf{Data Engineering} and backend development to bridge the gap between experimental AI models and production-ready business systems.
+}
+\vspace{-8pt}
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+\small{
+\linespread{1.15}\selectfont
+ \textbf{AI \& ML}{: LLMs (OpenAI, Claude, Gemini), RAG Architecture, Model Fine-Tuning, Vector Databases (FAISS), Supervised \& Reinforcement Learning, Multi-Agent Systems, Tool Calling, AI Guardrails \& Safety, Prompt Engineering, Chroma, Pinecone, NLP, Zapier, n8n} \\
+ \textbf{Languages \& Frameworks}{: Python (Pandas, PyTorch, FastAPI), Node.js, TypeScript, JavaScript, SQL, React, Angular, NestJS, REST API} \\
+ \textbf{Data Engineering \& Cloud}{: Snowflake, PostgreSQL, dbt Cloud, Apache Airflow, AWS (S3, Lambda, RDS), Azure} \\
+ \textbf{DevOps \& Architecture}{: Docker, CI/CD, Git, GitHub Actions, Nx Monorepo, System Design, JWT, RBAC}
+}
+\vspace{-8pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+    {My Inner Archive - AI-Powered RAG Journal}{}{Apr 2026}\vspace{-3pt}
+    \resumeItemListStart
+      \resumeItem{Architected a secure, full-stack \textbf{Retrieval-Augmented Generation (RAG)} platform that acts as a localized AI companion, exclusively utilizing a user's historical journal entries to synthesize personalized reflections and insights.}
+      \resumeItem{Engineered a resilient inference backend with smart fallback routing, seamlessly integrating the \textbf{Gemini API} for cloud-based generation while supporting fully private, local model execution via \textbf{Ollama}.}
+      \resumeItem{Developed complex frontend data visualizations from scratch utilizing raw SVGs and React state, mapping emotional patterns and user context stored securely in \textbf{Supabase (PostgreSQL)} with JWT authentication.}
+      \resumeItem{\textbf{Tech Stack:} React.js, Node.js, Express.js, Supabase (PostgreSQL), Gemini API, Ollama, RAG, JWT, Anti Gravity, Claude Code}
+    \resumeItemListEnd
+\vspace{-14pt}
+
+  \resumeProjectHeading
+    {AI Platform - Conversational RAG Engine}{}{Sep 2025}
+    \resumeItemListStart
+      \resumeItem{Architected a \textbf{Retrieval-Augmented Generation (RAG)} pipeline using Python and \textbf{LangChain}, enabling the system to reason over and synthesize unstructured technical knowledge.}
+      \resumeItem{Optimized vector indexing strategies using \textbf{FAISS} to manage 10,000+ document chunks, achieving sub-second retrieval latency and implementing robust \textbf{validation loops} for queries.}
+      \resumeItem{Designed modular backend parsing pipelines that reduced ingestion time by 40\%, seamlessly integrating public \textbf{LLMs} with strict \textbf{AI guardrails} to deliver safe, accurate responses.}
+      \resumeItem{\textbf{Tech Stack:} Python, LangChain, RAG Architecture, FAISS, LLMs, Backend APIs.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-16pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeHeading{Onki AI}{}{ -- AI Engineer}{Sep 2025 -- Present}
+  \resumeItemListStart
+    \resumeItem{Architected an automated ETL pipeline using \textbf{Azure OpenAI} to extract and structure raw HTML into validated JSON schemas, enriching data for over 3,500 retail products.}
+    \resumeItem{Implemented \textbf{RAG systems} connected to internal data sources, utilizing vector embeddings and \textbf{tool calling} to power a conversational Voice AI agent with a reliable source of truth.}
+    \resumeItem{Deployed secure \textbf{PostgreSQL} databases on Azure via Docker, implementing strict \textbf{RBAC} for multi-tenant isolation and automating \textbf{Data Quality} workflows via Prefect.}
+    \resumeItem{\textbf{Tech Stack:} Python, Azure OpenAI, PostgreSQL, Docker, Prefect, RAG, ETL Pipelines.}
+  \resumeItemListEnd
+\vspace{-4pt}
+
+\resumeHeading{LTIMindtree (Client: Colgate-Palmolive)}{}{ -- Data Engineer}{Jul 2021 -- Dec 2023}
+  \resumeItemListStart
+    \resumeItem{Architected a scalable \textbf{3-layer data backend} (Stage, Curated, Consumption) in \textbf{Snowflake}, securely migrating 10TB of enterprise records from legacy SAP S4/ECC via \textbf{HVR replication}.}
+    \resumeItem{Engineered robust data transformation pipelines using \textbf{dbt Cloud} and \textbf{Apache Airflow}, computing complex multi-granular aggregations to support high-performance analytical models.}
+    \resumeItem{Developed interactive global analytics dashboards in \textbf{Sigma Computing}, automating cross-timezone data refreshes to deliver real-time operational visibility to executive stakeholders.}
+    \resumeItem{\textbf{Tech Stack:} Snowflake, dbt Cloud, Apache Airflow, Python, SQL, SAP S4/ECC, Sigma Computing.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-16pt}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeEducationHeading
+    {University of Maryland, College Park}{M.Eng. in Software Engineering $|$ GPA: 3.8}{Jan 2024 -- Dec 2025}
+  \resumeEducationHeading
+    {VNR Vignana Jyothi Institute of Engineering}{B.Tech. in Computer Science $|$ GPA: 3.5}{Aug 2017 -- Jul 2021}
+\resumeSubHeadingListEnd
+\vspace{-12pt}
+
+% %-----------CERTIFICATIONS-----------
+% \section{Certifications}
+% \resumeSubHeadingListStart
+%   \resumeItem{\textbf{Machine Learning} -- Stanford University }
+%   \vspace{-4pt}
+%   \resumeItem{\textbf{Python for Data Science and AI} -- IBM }
+% \resumeSubHeadingListEnd
+
+\end{document}
